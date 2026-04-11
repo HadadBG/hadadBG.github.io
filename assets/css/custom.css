@@ -1,0 +1,59 @@
+.image-project{
+   margin: 2rem; 
+  
+}
+
+.image-container{
+    width: 80%;
+    margin: 2rem auto;
+    margin-top: 1rem;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.spotlights > section {
+    flex-direction: column;
+}
+
+.spotlights > section>h2 {
+    margin: 1rem auto;
+}
+.spotlights > section > .content.title{
+        padding: 2em 5em 0 5em;
+}
+.spotlights > section > .content{
+        padding: 0em 5em 0 5em;
+}
+.tecnologias-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem 4rem 5rem;
+    
+
+}
+.row_tec{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.tecnologia{
+   width: 10%;
+}
+.tecnologia>img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+section>h3{
+    padding-left: 5em;
+}
+.links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5rem 4rem 5rem;
+}
