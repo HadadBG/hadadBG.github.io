@@ -1,3 +1,8 @@
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* Internet Explorer y Edge */
+  user-select: none;         /* Estándar (Chrome, Firefox, Opera, Edge) */
+}
 .image-project{
    margin: 2rem; 
   
@@ -13,17 +18,23 @@
     height: 100%;
     object-fit: fill;
 }
-.spotlights > section {
+.wrapper {
     flex-direction: column;
 }
 
-.spotlights > section>h2 {
-    margin: 1rem auto;
+.wrapper >div >div>h2 {
+    margin: 1rem auto 3rem auto;
 }
-.spotlights > section > .content.title{
+.wrapper > .content.title{
         padding: 2em 5em 0 5em;
 }
-.spotlights > section > .content{
+.wrapper > .inner{
+        padding: 2em 5em 0 5em;
+}
+.wrapper > .inner>h2{
+           margin: 1rem auto 3rem auto;
+}
+.wrapper > .content{
         padding: 0em 5em 0 5em;
 }
 .tecnologias-container{
@@ -55,5 +66,38 @@ section>h3{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 0 5rem 4rem 5rem;
+    padding: 2rem 5rem 4rem 5rem;
+    
+}
+.container_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container_icon i{
+    font-size: 5rem;
+}
+.container_icon span{
+    font-size: 2rem;
+}
+.container_icon{
+    color: white;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.container_icon:hover {
+  animation: bounce 0.5s infinite; /* Plays while hovering */
+}
+
+.nutridesk{
+    height: 50vh;
+    max-height: 50vh;
+}
+.nutridesk_tec{
+  margin-top: 2rem;
 }
