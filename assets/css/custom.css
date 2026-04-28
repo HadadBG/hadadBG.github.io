@@ -1,3 +1,39 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{background:transparent}
+
+
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+	
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+
+  z-index: -3;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
 body {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none;     /* Internet Explorer y Edge */
@@ -19,6 +55,7 @@ body {
     object-fit: fill;
 }
 .wrapper {
+    position: unset;
     flex-direction: column;
 }
 
@@ -39,21 +76,33 @@ body {
 }
 .tecnologias-container{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 5rem 4rem 5rem;
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: repeat(6,1fr);
+    padding: 1rem 5rem 4rem 5rem;
     
 
 }
+.tecnologia{
+   width: 30%;
+   margin: 0 auto;
+   grid-column: span 2;
+}
+.links{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 2rem 5rem 4rem 5rem;
+    
+}
+
 .row_tec{
     width: 100%;
     display: flex;
     justify-content: space-around;
     
 }
-.tecnologia{
-   width: 10%;
-}
+
 .tecnologia>img{
     object-fit: fill;
     width: 100%;
@@ -62,13 +111,7 @@ body {
 section>h3{
     padding-left: 5em;
 }
-.links{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem 5rem 4rem 5rem;
-    
-}
+
 .container_icon{
     display: flex;
     flex-direction: column;
@@ -79,11 +122,25 @@ section>h3{
 }
 .container_icon span{
     font-size: 2rem;
+    text-align: center;
 }
 .container_icon{
     color: white;
 }
-
+.icon_link:only-child {
+  grid-column: 1 / -1;
+}
+.tecnologia:nth-last-child(2):nth-child(3n + 1) {
+  grid-column: span 3; /* primera mitad */
+  width: 20%;
+}
+.wrapper{
+    z-index: -2;
+}
+.tecnologia:last-child:nth-child(3n + 2) {
+  grid-column: span 3; /* segunda mitad */
+  width: 20%;
+}
 @keyframes bounce {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -100,4 +157,92 @@ section>h3{
 }
 .nutridesk_tec{
   margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .tecnologias-container{
+        padding: 0 0 4rem 0;
+    }
+   .links{
+        padding: 2rem 0 4rem 0;
+       
+    }
+    .image-container{
+        width: 100%;
+    }
+    ul.contact{
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+
+}
+@media screen and (max-width: 430px) {
+     .tecnologia{
+        width: 15%;
+    }
+   
+   .links{
+        padding: 0;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .container_icon i{
+    font-size: 3rem;
+}
+.container_icon span{
+    font-size: 1rem;
+    text-align: center;
+    
+}
+.container_icon{
+    margin-bottom: 1rem;
+}
+.wrapper > .content.title{
+        padding: 1em 0.5rem 0 0.5rem;
+}
+
+.wrapper > .inner{
+        padding: 1em 0.5rem 0 0.5rem;
+}
+.wrapper > .inner>h2{
+           margin: 1rem auto 1rem auto;
+}
+.wrapper >div >div>h2 {
+    margin: 0.5rem auto 1rem auto;
+}
+/* Si sobra 1 elemento (no múltiplo de 3) */
+.icon_link:last-child:nth-child(2n + 1) {
+  grid-column: 1 / -1; /* ocupa todo el ancho */
+}
+.tecnologia{
+    grid-column: span 3;
+    width: 40%;
+}
+.tecnologia:last-child:nth-child(2n + 1) {
+  grid-column: 1 / -1; /* ocupa todo el ancho */
+  width: 20%;
+}
+
+
+}
+
+#particles-js{
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+}
+#hero{
+  position: relative;
+ 
+}
+.wrapper > .inner{
+    position: relative;
+       z-index: 100;
 }
