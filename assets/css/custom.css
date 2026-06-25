@@ -34,7 +34,7 @@ canvas{
 }
 
 
-body {
+section {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none;     /* Internet Explorer y Edge */
   user-select: none;         /* Estándar (Chrome, Firefox, Opera, Edge) */
@@ -245,4 +245,21 @@ section>h3{
 .wrapper > .inner{
     position: relative;
        z-index: 100;
+}
+
+#contact_section {
+  -webkit-user-select: text ;  /* Safari */
+  -moz-user-select: text;    /* Firefox */
+  -ms-user-select: text;     /* Legacy IE/Edge */
+  user-select: text;         /* Standard syntax */
+
+}
+.container_icon2 i{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 3.5rem;
+    -webkit-user-select: none ;  /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Legacy IE/Edge */
+  user-select: none;         /* Standard syntax */
 }
